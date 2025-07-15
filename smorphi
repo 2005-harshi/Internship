@@ -1,0 +1,48 @@
+#include <smorphi_single.h>
+Smorphi_single robot;
+void setup() {
+  Serial.begin(115200);
+  robot.BeginSmorphi_single();  
+}
+void loop() {
+  // Move Forward
+  robot.MoveForward(80);    // Speed = 80%
+  delay(3000);               // Move for 3 seconds
+  robot.MoveForward(0);      // Stop
+  delay(1000);               // Pause for 1 second
+// Move Backward
+  robot.MoveBackward(80);   // Speed = 80%
+  delay(3000);               // Move for 3 seconds
+  robot.MoveBackward(0);     // Stop
+  delay(1000);               // Pause for 1 second
+  // Move Left
+  robot.MoveLeft(80);       // Speed = 80%
+  delay(3000);               // Move for 3 seconds
+  robot.MoveLeft(0);         // Stop
+  delay(1000);               // Pause for 1 second
+// Move Right
+  robot.MoveRight(80);      // Speed = 80%
+  delay(3000);               // Move for 3 seconds
+  robot.MoveRight(0);        // Stop
+delay(1000);               // Pause for 1 second
+ // Move Diagonal Up Right
+  robot.MoveDiagUpRight(80);  // Speed = 80%
+  delay(3000);                 // Move for 3 seconds
+  robot.MoveDiagUpRight(0);    // Stop
+  delay(1000);                 // Pause for 1 second
+// Move Diagonal Down Right
+  robot.MoveDiagDownRight(80);  // Speed = 80%
+  delay(3000);                   // Move for 3 seconds
+  robot.MoveDiagDownRight(0);    // Stop
+  delay(1000);                   // Pause for 1 second
+// Move Diagonal Up Left
+  robot.MoveDiagUpLeft(80);    // Speed = 80%
+  delay(3000);                  // Move for 3 seconds
+  robot.MoveDiagUpLeft(0);      // Stop
+  delay(1000);                  // Pause for 1 second
+ // Move Diagonal Down Left
+  robot.MoveDiagDownLeft(80);  // Speed = 80%
+  delay(3000);                  // Move for 3 seconds
+  robot.MoveDiagDownLeft(0);    // Stop
+  delay(1000);                  // Pause for 1 second
+}
