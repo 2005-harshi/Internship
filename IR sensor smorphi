@@ -1,0 +1,20 @@
+
+#include <smorphi_single.h>
+Smorphi_single robot;
+#define IR_PIN 16  // IR sensor connected to ESPIO16(Sensor 1 in smorphi board)
+void setup() {
+  Serial.begin(115200);
+  robot.BeginSmorphi_single();
+  pinMode(IR_PIN, INPUT);
+}
+void loop() {
+  int IRValue = digitalRead(IR_PIN);
+
+  if (IRValue == HIGH) {
+    robot.MoveForward(80);   
+    } else {
+    robot.MoveForward(0);  
+      }
+delay(10);
+}
+
